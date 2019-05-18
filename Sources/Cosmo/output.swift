@@ -1,15 +1,10 @@
 //
-//  main.swift
+//  output.swift
 //  Cosmo
 //
-//  Created by Rasmus Wejlgaard on 17/05/2019.
+//  Created by Rasmus Wejlgaard on 18/05/2019.
 //  Copyright © 2019 Rasmus Wejlgaard. All rights reserved.
 //
 
 import Foundation
 
-func main() -> Void {
-    
-}
-
-main()

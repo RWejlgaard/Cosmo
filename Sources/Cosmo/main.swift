@@ -9,6 +9,9 @@
 import Foundation
 
 func main() -> Void {
+    let out = Output(type: .SpeechAndConsole)
+    out.out("This is only a quick test sir")
+    
     
 }
 
