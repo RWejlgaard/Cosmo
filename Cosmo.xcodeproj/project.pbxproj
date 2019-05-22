@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"Cosmo::CosmoPackageTests::ProductTarget" /* CosmoPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_41 /* Build configuration list for PBXAggregateTarget "CosmoPackageTests" */;
+			buildConfigurationList = OBJ_43 /* Build configuration list for PBXAggregateTarget "CosmoPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_44 /* PBXTargetDependency */,
+				OBJ_46 /* PBXTargetDependency */,
 			);
 			name = CosmoPackageTests;
 			productName = CosmoPackageTests;
@@ -21,25 +21,29 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_28 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* TextToSpeech.swift */; };
-		OBJ_29 /* listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* listener.swift */; };
-		OBJ_30 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* main.swift */; };
-		OBJ_31 /* output.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* output.swift */; };
-		OBJ_32 /* router.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* router.swift */; };
-		OBJ_39 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_50 /* CosmoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* CosmoTests.swift */; };
-		OBJ_51 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* XCTestManifests.swift */; };
+		6DEA1BD422940B13007F5F0B /* fileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEA1BD322940B13007F5F0B /* fileReader.swift */; };
+		6DEA1BD622943CB7007F5F0B /* phrases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEA1BD522943CB7007F5F0B /* phrases.swift */; };
+		6DEA1BD822947E77007F5F0B /* weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEA1BD722947E77007F5F0B /* weather.swift */; };
+		6DEA1BDA229481A5007F5F0B /* YahooWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEA1BD9229481A5007F5F0B /* YahooWeather.swift */; };
+		OBJ_30 /* ExecutionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ExecutionModule.swift */; };
+		OBJ_31 /* fortune.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* fortune.swift */; };
+		OBJ_32 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Router.swift */; };
+		OBJ_33 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* TextToSpeech.swift */; };
+		OBJ_34 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* main.swift */; };
+		OBJ_41 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_52 /* CosmoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* CosmoTests.swift */; };
+		OBJ_53 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* XCTestManifests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6DEA1BC0229048AD007F5F0B /* PBXContainerItemProxy */ = {
+		6DEA1BCE22933EF9007F5F0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Cosmo::Cosmo";
 			remoteInfo = Cosmo;
 		};
-		6DEA1BC1229048AE007F5F0B /* PBXContainerItemProxy */ = {
+		6DEA1BCF22933EFA007F5F0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -49,30 +53,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6DEA1BC32290600E007F5F0B /* idea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = idea.jpg; sourceTree = "<group>"; };
-		6DEA1BC422906048007F5F0B /* Cosmo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cosmo.png; sourceTree = "<group>"; };
+		6DEA1BD122934995007F5F0B /* strings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = strings.json; sourceTree = "<group>"; };
+		6DEA1BD2229349DB007F5F0B /* static.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = static.strings; sourceTree = "<group>"; };
+		6DEA1BD322940B13007F5F0B /* fileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fileReader.swift; sourceTree = "<group>"; };
+		6DEA1BD522943CB7007F5F0B /* phrases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phrases.swift; sourceTree = "<group>"; };
+		6DEA1BD722947E77007F5F0B /* weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weather.swift; sourceTree = "<group>"; };
+		6DEA1BD9229481A5007F5F0B /* YahooWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooWeather.swift; sourceTree = "<group>"; };
 		"Cosmo::Cosmo::Product" /* Cosmo */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cosmo; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Cosmo::CosmoTests::Product" /* CosmoTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CosmoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_10 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
-		OBJ_11 /* listener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listener.swift; sourceTree = "<group>"; };
-		OBJ_12 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		OBJ_13 /* output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = output.swift; sourceTree = "<group>"; };
-		OBJ_14 /* router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = router.swift; sourceTree = "<group>"; };
-		OBJ_17 /* CosmoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmoTests.swift; sourceTree = "<group>"; };
-		OBJ_18 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_22 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_11 /* fortune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fortune.swift; sourceTree = "<group>"; };
+		OBJ_12 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		OBJ_14 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
+		OBJ_15 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_18 /* CosmoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmoTests.swift; sourceTree = "<group>"; };
+		OBJ_19 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_23 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; path = img; sourceTree = SOURCE_ROOT; };
+		OBJ_24 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* ExecutionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_33 /* Frameworks */ = {
+		OBJ_35 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_52 /* Frameworks */ = {
+		OBJ_54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
@@ -82,53 +91,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6DEA1BC222905FD8007F5F0B /* img */ = {
+		6DEA1BD0229348F6007F5F0B /* etc */ = {
 			isa = PBXGroup;
 			children = (
-				6DEA1BC32290600E007F5F0B /* idea.jpg */,
-				6DEA1BC422906048007F5F0B /* Cosmo.png */,
+				6DEA1BD122934995007F5F0B /* strings.json */,
+				6DEA1BD2229349DB007F5F0B /* static.strings */,
+				6DEA1BD522943CB7007F5F0B /* phrases.swift */,
 			);
-			path = img;
+			path = etc;
 			sourceTree = "<group>";
 		};
-		OBJ_15 /* Tests */ = {
+		OBJ_10 /* ExecutionModules */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_16 /* CosmoTests */,
+				OBJ_11 /* fortune.swift */,
+				6DEA1BD722947E77007F5F0B /* weather.swift */,
+			);
+			path = ExecutionModules;
+			sourceTree = "<group>";
+		};
+		OBJ_13 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				6DEA1BD322940B13007F5F0B /* fileReader.swift */,
+				OBJ_14 /* TextToSpeech.swift */,
+				6DEA1BD9229481A5007F5F0B /* YahooWeather.swift */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		OBJ_16 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* CosmoTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_16 /* CosmoTests */ = {
+		OBJ_17 /* CosmoTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_17 /* CosmoTests.swift */,
-				OBJ_18 /* XCTestManifests.swift */,
+				OBJ_18 /* CosmoTests.swift */,
+				OBJ_19 /* XCTestManifests.swift */,
 			);
 			name = CosmoTests;
 			path = Tests/CosmoTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_19 /* Products */ = {
+		OBJ_20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"Cosmo::CosmoTests::Product" /* CosmoTests.xctest */,
 				"Cosmo::Cosmo::Product" /* Cosmo */,
+				"Cosmo::CosmoTests::Product" /* CosmoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_15 /* Tests */,
-				6DEA1BC222905FD8007F5F0B /* img */,
-				OBJ_19 /* Products */,
-				OBJ_22 /* README.md */,
+				OBJ_16 /* Tests */,
+				OBJ_20 /* Products */,
+				OBJ_23 /* img */,
+				OBJ_24 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -142,33 +170,27 @@
 		OBJ_8 /* Cosmo */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* listener.swift */,
-				OBJ_12 /* main.swift */,
-				OBJ_13 /* output.swift */,
-				OBJ_14 /* router.swift */,
-				OBJ_9 /* libs */,
+				6DEA1BD0229348F6007F5F0B /* etc */,
+				OBJ_9 /* ExecutionModule.swift */,
+				OBJ_10 /* ExecutionModules */,
+				OBJ_12 /* Router.swift */,
+				OBJ_13 /* libs */,
+				OBJ_15 /* main.swift */,
 			);
 			name = Cosmo;
 			path = Sources/Cosmo;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_9 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_10 /* TextToSpeech.swift */,
-			);
-			path = libs;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		"Cosmo::Cosmo" /* Cosmo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_24 /* Build configuration list for PBXNativeTarget "Cosmo" */;
+			buildConfigurationList = OBJ_26 /* Build configuration list for PBXNativeTarget "Cosmo" */;
 			buildPhases = (
-				OBJ_27 /* Sources */,
-				OBJ_33 /* Frameworks */,
+				OBJ_29 /* Sources */,
+				OBJ_35 /* Frameworks */,
+				6D4EEDC12295F48A0074F0C0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -181,15 +203,15 @@
 		};
 		"Cosmo::CosmoTests" /* CosmoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_46 /* Build configuration list for PBXNativeTarget "CosmoTests" */;
+			buildConfigurationList = OBJ_48 /* Build configuration list for PBXNativeTarget "CosmoTests" */;
 			buildPhases = (
-				OBJ_49 /* Sources */,
-				OBJ_52 /* Frameworks */,
+				OBJ_51 /* Sources */,
+				OBJ_54 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_53 /* PBXTargetDependency */,
+				OBJ_55 /* PBXTargetDependency */,
 			);
 			name = CosmoTests;
 			productName = CosmoTests;
@@ -198,9 +220,9 @@
 		};
 		"Cosmo::SwiftPMPackageDescription" /* CosmoPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_35 /* Build configuration list for PBXNativeTarget "CosmoPackageDescription" */;
+			buildConfigurationList = OBJ_37 /* Build configuration list for PBXNativeTarget "CosmoPackageDescription" */;
 			buildPhases = (
-				OBJ_38 /* Sources */,
+				OBJ_40 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -227,8 +249,8 @@
 				English,
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_19 /* Products */;
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_20 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -240,53 +262,77 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D4EEDC12295F48A0074F0C0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_27 /* Sources */ = {
+		OBJ_29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_28 /* TextToSpeech.swift in Sources */,
-				OBJ_29 /* listener.swift in Sources */,
-				OBJ_30 /* main.swift in Sources */,
-				OBJ_31 /* output.swift in Sources */,
-				OBJ_32 /* router.swift in Sources */,
+				6DEA1BD822947E77007F5F0B /* weather.swift in Sources */,
+				6DEA1BD622943CB7007F5F0B /* phrases.swift in Sources */,
+				OBJ_30 /* ExecutionModule.swift in Sources */,
+				OBJ_31 /* fortune.swift in Sources */,
+				OBJ_32 /* Router.swift in Sources */,
+				OBJ_33 /* TextToSpeech.swift in Sources */,
+				6DEA1BD422940B13007F5F0B /* fileReader.swift in Sources */,
+				OBJ_34 /* main.swift in Sources */,
+				6DEA1BDA229481A5007F5F0B /* YahooWeather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_38 /* Sources */ = {
+		OBJ_40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_39 /* Package.swift in Sources */,
+				OBJ_41 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_49 /* Sources */ = {
+		OBJ_51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_50 /* CosmoTests.swift in Sources */,
-				OBJ_51 /* XCTestManifests.swift in Sources */,
+				OBJ_52 /* CosmoTests.swift in Sources */,
+				OBJ_53 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_44 /* PBXTargetDependency */ = {
+		OBJ_46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Cosmo::CosmoTests" /* CosmoTests */;
-			targetProxy = 6DEA1BC1229048AE007F5F0B /* PBXContainerItemProxy */;
+			targetProxy = 6DEA1BCF22933EFA007F5F0B /* PBXContainerItemProxy */;
 		};
-		OBJ_53 /* PBXTargetDependency */ = {
+		OBJ_55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Cosmo::Cosmo" /* Cosmo */;
-			targetProxy = 6DEA1BC0229048AD007F5F0B /* PBXContainerItemProxy */;
+			targetProxy = 6DEA1BCE22933EF9007F5F0B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_25 /* Debug */ = {
+		OBJ_27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -311,7 +357,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_26 /* Release */ = {
+		OBJ_28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -363,7 +409,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_36 /* Debug */ = {
+		OBJ_38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -372,7 +418,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_37 /* Release */ = {
+		OBJ_39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -405,19 +451,19 @@
 			};
 			name = Release;
 		};
-		OBJ_42 /* Debug */ = {
+		OBJ_44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_43 /* Release */ = {
+		OBJ_45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		OBJ_47 /* Debug */ = {
+		OBJ_49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -442,7 +488,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_48 /* Release */ = {
+		OBJ_50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -479,38 +525,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_24 /* Build configuration list for PBXNativeTarget "Cosmo" */ = {
+		OBJ_26 /* Build configuration list for PBXNativeTarget "Cosmo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_25 /* Debug */,
-				OBJ_26 /* Release */,
+				OBJ_27 /* Debug */,
+				OBJ_28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_35 /* Build configuration list for PBXNativeTarget "CosmoPackageDescription" */ = {
+		OBJ_37 /* Build configuration list for PBXNativeTarget "CosmoPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_36 /* Debug */,
-				OBJ_37 /* Release */,
+				OBJ_38 /* Debug */,
+				OBJ_39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_41 /* Build configuration list for PBXAggregateTarget "CosmoPackageTests" */ = {
+		OBJ_43 /* Build configuration list for PBXAggregateTarget "CosmoPackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_42 /* Debug */,
-				OBJ_43 /* Release */,
+				OBJ_44 /* Debug */,
+				OBJ_45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_46 /* Build configuration list for PBXNativeTarget "CosmoTests" */ = {
+		OBJ_48 /* Build configuration list for PBXNativeTarget "CosmoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_47 /* Debug */,
-				OBJ_48 /* Release */,
+				OBJ_49 /* Debug */,
+				OBJ_50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

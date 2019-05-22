@@ -8,11 +8,23 @@
 
 import Foundation
 
-func main() -> Void {
-    let out = Output(type: .SpeechAndConsole)
-    out.out("This is only a quick test sir")
-    
-    
+var name = "jarvis"
+
+func main() {
+    let voice = TextToSpeech(voiceName: .americanFemale, audio: .local)
+    let inp = Input(.console)
+
+    while true {
+        let text = inp.listen()
+
+        voice.speak(text)
+
+        for mod in Execution.modules {
+            if mod.isMatch(forText: text) {
+                voice.speak(mod.action(kwargs: nil))
+            }
+        }
+    }
 }
 
 main()

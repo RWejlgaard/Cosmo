@@ -1,0 +1,24 @@
+{
+    "static_responses": {
+        "questions": {
+            "whoAreYou": [
+                "who are you"
+            ],
+            "whatCanYouDo": [
+                "what can you do"
+            ]
+        },
+        "answers:": {
+            "whoAreYou": [
+                "I am %s, your personal assistant"
+            ]
+            "whatCanYouDo": [
+                "I can do a lot of things"
+            ]
+        }
+    },
+    "greetings": [
+        "Good day to you I'm %s. Your personal assistant",
+        "Hello! I'm %s. Nice to meet you"
+    ],
+}

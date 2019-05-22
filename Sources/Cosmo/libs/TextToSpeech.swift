@@ -6,79 +6,97 @@
 //  Copyright © 2019 Rasmus Wejlgaard. All rights reserved.
 //
 
-import Foundation
 import AVFoundation
+import Foundation
 
 public class VoiceData {
     var name: String
     var langCode: String
-    
+
     init(letter: String, region: String) {
-        self.name = "\(region)-WaveNet-\(letter.uppercased())"
-        self.langCode = region
+        name = "\(region)-WaveNet-\(letter.uppercased())"
+        langCode = region
     }
 }
 
 class Voice {
-    var Name: VoiceData
-    
+    var voiceName: VoiceData
+
     enum VoiceName {
-        case IndianMale
-        case IndianFemale
-        case AmericanMale
-        case AmericanFemale
-        case AustralianMale
-        case AustralianFemale
+        case indianMale
+        case indianFemale
+        case americanMale
+        case americanFemale
+        case australianMale
+        case australianFemale
+        case britishMale
+        case britishFemale
+        case danish
     }
-    
+
     init(name: VoiceName) {
         switch name {
-            case .IndianMale:
-                self.Name = VoiceData(letter: "C", region: "en-IN")
-            
-            case .IndianFemale:
-                self.Name = VoiceData(letter: "A", region: "en-IN")
-            
-            case .AmericanMale:
-                self.Name = VoiceData(letter: "B", region: "en-US")
-            
-            case .AmericanFemale:
-                self.Name = VoiceData(letter: "F", region: "en-US")
-            
-            case .AustralianMale:
-                self.Name = VoiceData(letter: "B", region: "en-AU")
-            
-            case .AustralianFemale:
-                self.Name = VoiceData(letter: "A", region: "en-AU")
+        case .indianMale:
+            voiceName = VoiceData(letter: "C", region: "en-IN")
+
+        case .indianFemale:
+            voiceName = VoiceData(letter: "A", region: "en-IN")
+
+        case .americanMale:
+            voiceName = VoiceData(letter: "B", region: "en-US")
+
+        case .americanFemale:
+            voiceName = VoiceData(letter: "F", region: "en-US")
+
+        case .australianMale:
+            voiceName = VoiceData(letter: "B", region: "en-AU")
+
+        case .australianFemale:
+            voiceName = VoiceData(letter: "A", region: "en-AU")
+
+        case .britishMale:
+            voiceName = VoiceData(letter: "B", region: "en-GB")
+
+        case .britishFemale:
+            voiceName = VoiceData(letter: "A", region: "en-GB")
+
+        case .danish:
+            voiceName = VoiceData(letter: "A", region: "da-DK")
         }
     }
 }
 
 enum AudioEngine {
-    case Local
-    case Remote
+    case local
+    case remote
 }
 
 class TextToSpeech {
     var chosenVoice: VoiceData
     var audioEngine: AudioEngine
-    
+
     init(voiceName: Voice.VoiceName, audio: AudioEngine) {
-        self.chosenVoice = Voice(name: voiceName).Name
-        self.audioEngine = audio
+        chosenVoice = Voice(name: voiceName).voiceName
+        audioEngine = audio
+        speak("Ready")
     }
-    
-    func changeVoice(voiceName: Voice.VoiceName) -> Void {
-        self.chosenVoice = Voice(name: voiceName).Name
+
+    init(voiceData: VoiceData, audioEngine: AudioEngine) {
+        chosenVoice = voiceData
+        self.audioEngine = audioEngine
     }
-    
+
+    func changeVoice(voiceName: Voice.VoiceName) {
+        chosenVoice = Voice(name: voiceName).voiceName
+    }
+
     private func getSpeechData(text: String) -> String {
-        let endpoint = "https://texttospeech.googleapis.com/v1/text:synthesize?key=***REMOVED***"
-        
+        let endpoint = "https://texttospeech.googleapis.com/v1/text:synthesize?key=" +
+        "***REMOVED***"
         let parameters = [
             "audioConfig": [
                 "audioEncoding": "LINEAR16",
-                "pitch": "1",
+                "pitch": "-2",
                 "speakingRate": "1.00"
             ],
             "input": [
@@ -89,38 +107,39 @@ class TextToSpeech {
                 "name": self.chosenVoice.name
             ]
         ]
-        
+
         let url = URL(string: endpoint)!
         let session = URLSession.shared
         let sem = DispatchSemaphore(value: 0)
-        
+
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
-        } catch let error {
+        } catch {
             print(error.localizedDescription)
         }
-        
+
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-        
+
         var speechData: String = ""
-        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
+        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, _, error in
             guard error == nil else {
                 return
             }
-            
+
             guard let data = data else {
                 return
             }
             do {
-                //create json object from data
-                if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
-                    speechData = json["audioContent"] as! String
+                // create json object from data
+                if let json = try JSONSerialization.jsonObject(with: data,
+                                                               options: .mutableContainers) as? [String: Any] {
+                    speechData = json["audioContent"] as? String ?? ""
                     sem.signal()
                 }
-            } catch let error {
+            } catch {
                 print(error.localizedDescription)
             }
         })
@@ -128,29 +147,26 @@ class TextToSpeech {
         sem.wait()
         return speechData
     }
-    
-    func Speak(_ text: String) -> Void {
+
+    func speak(_ text: String) {
         let data = getSpeechData(text: text)
         let decoded = Data(base64Encoded: data)!
-        
+
         var player: AVAudioPlayer?
-        
+
+        print(">>> \"\(text)\"")
+
         do {
-            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
             player = try AVAudioPlayer(data: decoded)
-            
-            /* iOS 10 and earlier require the following line:
-             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
-            
+
             guard let player = player else { return }
             player.prepareToPlay()
             player.play()
-            
-            while player.isPlaying { }
-            
-        } catch let error {
+
+            while player.isPlaying {}
+
+        } catch {
             print(error.localizedDescription)
         }
     }
-    
 }

@@ -1,0 +1,12 @@
+/* 
+  static.strings
+  Cosmo
+
+  Created by Rasmus Wejlgaard on 21/05/2019.
+  
+*/
+
+"greetings" = [
+"Good day to you I'm %s. Your personal assistant",
+"Hello! I'm %s. Nice to meet you"
+];
