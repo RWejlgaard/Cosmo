@@ -8,24 +8,9 @@
 
 import Foundation
 
-enum InputType {
-    case speech
-    case console
-}
-
-class Input {
-    let inputType: InputType
-
-    init(_ type: InputType) {
-        inputType = type
-    }
-
-    func listen() -> String {
-        if inputType == .console {
-            return readLine()!
-        } else if inputType == .speech {
-            return ""
-        }
-        return ""
-    }
+struct Router {
+    static var modules: [ExecutionModule] = [
+        Weather(),
+        AboutJarvis()
+    ]
 }

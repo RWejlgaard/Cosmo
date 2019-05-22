@@ -11,7 +11,7 @@ import Foundation
 var name = "jarvis"
 
 func main() {
-    let voice = TextToSpeech(voiceName: .americanFemale, audio: .local)
+    let voice = TextToSpeech(voiceName: .indianMale, audio: .local)
     let inp = Input(.console)
 
     while true {
@@ -19,7 +19,7 @@ func main() {
 
         voice.speak(text)
 
-        for mod in Execution.modules {
+        for mod in Router.modules {
             if mod.isMatch(forText: text) {
                 voice.speak(mod.action(kwargs: nil))
             }
