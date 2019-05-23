@@ -2,7 +2,7 @@ import class Foundation.Bundle
 import XCTest
 
 final class CosmoTests: XCTestCase {
-    func testExample() throws {
+    /*func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
@@ -59,5 +59,5 @@ final class CosmoTests: XCTestCase {
 
     static var allTests = [
         ("testExample", testExample)
-    ]
+    ]*/
 }
