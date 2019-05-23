@@ -4,4 +4,11 @@ install: swift package generate-xcodeproj
 xcode_project: Cosmo.xcodeproj
 xcode_scheme: Cosmo
 xcode_destination: platform=macOS
-
+deploy:
+  provider: releases
+  user: rwejlgaard
+  password:
+    secure: UWQC6lmHGBUty7Vtz4mTfD94p/MdWErZqUirwefjLi1UXvNQUeApjeZcbnFfZmaooKF2xnNiZkucltRphii/YAKshxDBk98mPYGlTBrxJQyguYi1TKWAPGhh0HhZcAeI/oqFF0mZ3pu9rSLQfYl7S4EU2ItdM4KCUkJo1iuISCHi+MBJMC1qmigcjOnZClcPoqVUOrYKQwFdPBiJmQubQY9Jto0qo862Zxkpo/jUNORYMviDFjbN1sLqFHOxtS/VE9Vz7h70jraX0U3p2u16TOKyuftJZHOuaaWYYDTZKxrnF2pa/SBOdBa1VnbEirE3NPzNlxPANAFAa2ksE3gLR78N2Hg0cKUYl185Lgch1tbsW2Gkjjr89Jn4ZhvIGaskckjGGggw1YDD+EeCNJaqTsC09nt8OQVXlD27/K1BH6/mcGfal8ZmdxGnEpdseZrGZpt1yTHMeTlQyEI/fnr+PP+qczuEbBlcXNOFkJZ7NWaylYnxmMmMyV4J7nHCm1nMP3Iz13xildrvIvcevG3cGJHedXpcUQ8wJWcGzd6hpFzLD82mQRqNhuq2H4An/f0etaJO3Q4nWwLGHw7Decuo0cxVigfZLlbvhHnWxyomFeTMe3QS0kIzIE458xWNbMoO16FapQxbL9Cn/I8ZToV4bj5bnyv9Rz4jN7LS3K3y3Gg=
+  file: ".build/x86_64-apple-macosx/Cosmo"
+  on:
+    tags: true
