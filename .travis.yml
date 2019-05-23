@@ -1,0 +1,6 @@
+language: swift
+install: swift package generate-xcodeproj
+xcode_project: Cosmo.xcodeproj
+xcode_scheme: Cosmo
+xcode_destination: platform=macOS
+
