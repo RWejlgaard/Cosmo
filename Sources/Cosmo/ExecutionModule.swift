@@ -11,7 +11,7 @@ class ExecutionModule {
     func triggerPhrases() -> [String] {
         return [""]
     }
-    
+
     func isMatch(forText: String) -> Bool {
         for trigger in triggerPhrases() {
             if forText.starts(with: trigger) {

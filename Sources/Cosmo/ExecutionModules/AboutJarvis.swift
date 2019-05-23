@@ -10,10 +10,12 @@ import Foundation
 class AboutJarvis: ExecutionModule {
     override func triggerPhrases() -> [String] {
         return [
-            "what do you do"
+            "what do you do",
+            "what can you do",
+            "tell me about yourself"
         ]
     }
-    
+
     override func action(kwargs _: [String: Any]?) -> String {
         return "I am Jarvis. your personal assistant. " +
             "I can do alot of things such as turn the lights on and off," +

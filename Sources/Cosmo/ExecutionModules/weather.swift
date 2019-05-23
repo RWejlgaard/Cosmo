@@ -18,7 +18,7 @@ class Weather: ExecutionModule {
             "what is the temperature"
         ]
     }
-    
+
     override func action(kwargs _: [String: Any]? = nil) -> String {
         return "It's sunny with 24 degrees"
     }

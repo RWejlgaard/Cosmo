@@ -14,11 +14,11 @@ enum InputType {
 
 class Input {
     let inputType: InputType
-    
+
     init(_ type: InputType) {
         inputType = type
     }
-    
+
     func listen() -> String {
         if inputType == .console {
             return readLine()!

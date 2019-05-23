@@ -9,7 +9,7 @@
 import Foundation
 
 struct Router {
-    static var modules: [ExecutionModule] = [
+    static var activatedModules: [ExecutionModule] = [
         Weather(),
         AboutJarvis()
     ]

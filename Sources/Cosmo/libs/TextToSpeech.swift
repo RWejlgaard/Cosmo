@@ -96,7 +96,7 @@ class TextToSpeech {
         let parameters = [
             "audioConfig": [
                 "audioEncoding": "LINEAR16",
-                "pitch": "-2",
+                "pitch": "-4",
                 "speakingRate": "1.00"
             ],
             "input": [

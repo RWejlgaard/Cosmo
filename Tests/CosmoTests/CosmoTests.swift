@@ -16,6 +16,7 @@ final class CosmoTests: XCTestCase {
 
         let process = Process()
         process.executableURL = fooBinary
+        process.arguments = [""]
 
         let pipe = Pipe()
         process.standardOutput = pipe
@@ -26,7 +27,22 @@ final class CosmoTests: XCTestCase {
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         let output = String(data: data, encoding: .utf8)
 
-        XCTAssertEqual(output, "Hello, world!\n")
+        XCTAssertEqual(output, ">>> \"READY\"")
+    }
+
+    func aboutJarvisTest() throws {
+
+        guard #available(macOS 10.13, *) else {
+            return
+        }
+
+        let binary = productsDirectory.appendingPathComponent("Cosmo")
+
+        let process = Process()
+        process.executableURL = binary
+
+        print("")
+
     }
 
     /// Returns path to the built products directory.
