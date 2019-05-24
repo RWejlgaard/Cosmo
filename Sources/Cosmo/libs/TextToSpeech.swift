@@ -91,8 +91,12 @@ class TextToSpeech {
     }
 
     private func getSpeechData(text: String) -> String {
-        let endpoint = "https://texttospeech.googleapis.com/v1/text:synthesize?key=" +
-        "***REMOVED***"
+        guard let apiKey = ProcessInfo.processInfo.environment["GOOGLE_API_KEY"] else {
+            print("GOOGLE_API_KEY Env variable not found")
+            exit(1)
+        }
+        let endpoint = "https://texttospeech.googleapis.com/v1/text:synthesize?key=\(apiKey)"
+        
         let parameters = [
             "audioConfig": [
                 "audioEncoding": "LINEAR16",

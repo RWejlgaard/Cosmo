@@ -11,6 +11,7 @@ import Foundation
 struct Router {
     static var activatedModules: [ExecutionModule] = [
         Weather(),
-        AboutJarvis()
+        AboutJarvis(),
+        Joke()
     ]
 }
